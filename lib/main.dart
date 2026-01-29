@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rattel/core/routing/on_generate_routes.dart';
+import 'package:rattel/core/routing/routes_name.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +15,15 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Rattel',
-      theme: ThemeData(),
-      home: Scaffold(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(
+      
+        
+      ),
+      
+      // home: Scaffold(),
       onGenerateRoute: onGenerateRoutes,
+      initialRoute: RoutesName.layoutScreen,
     );
   }
 }

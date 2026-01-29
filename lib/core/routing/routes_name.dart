@@ -9,7 +9,6 @@ class RoutesName {
   static const String profileScreen = "/profileScreen";
 
   //layout
-
+  static const String layoutScreen = "/layoutScreen";
   static const String homeScreen = "/homeScreen";
-
 }
