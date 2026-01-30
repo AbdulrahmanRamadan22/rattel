@@ -1,29 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:rattel/core/routing/on_generate_routes.dart';
-import 'package:rattel/core/routing/routes_name.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+import 'package:rattel/rattel_app.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Rattel',
-      themeMode: ThemeMode.light,
-      theme: ThemeData(
-      
-        
-      ),
-      
-      // home: Scaffold(),
-      onGenerateRoute: onGenerateRoutes,
-      initialRoute: RoutesName.layoutScreen,
-    );
-  }
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // To fix texts being hidden bug in flutter_screenutil in release mode.
+  await ScreenUtil.ensureScreenSize();
+  runApp(const  RattelApp());
 }
